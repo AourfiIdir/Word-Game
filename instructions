@@ -1,0 +1,43 @@
+
+
+**LEVEL1**
+
+
+/graphic
+
+1/ letters 
+2/ definitions
+3/ input
+4/ mark down the definition when selected
+5/ background  
+
+
+
+/logique
+1/get MAX_LENGHT and MAX_WORD request from the database
+2/save them in a list word[];
+3/display the letters + definitions
+4/let the user enter a word
+5/1/check if the word contains any other letter than the ones displayed
+5/2/check if the word is within our list of words 
+5/2/1/if true we mark the definition of that word as completed adn clear the input
+5/2/1/if not clear the input 'and display a lost message'
+6/check if all words are been selected 
+6/1/if that the case we display a winning phrase
+
+facultative: guess chances
+
+
+/types
+word --- int length , "char ** char ," char * definition , char *word ; bool selected=false;
+
+#define MAX_WORD
+#define MAX_LENGTH
+
+
+//states file
+typedef struct gameCheck{
+    void(checkFinished*)(word * w);
+    void(initialise*)(void);
+    void(checkWord*)(word *w,char *input);
+}gameCheck;
